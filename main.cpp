@@ -391,13 +391,13 @@ int main (int argc, char *argv[]) {
 					int index_of_winning_object = winningObjectIndex(intersections);
 					
 					if (index_of_winning_object == -1) {
-						// set the backgroung black
+						// set the background black
 						tempRed[aa_index] = 0;
 						tempGreen[aa_index] = 0;
 						tempBlue[aa_index] = 0;
 					}
 					else{
-						// index coresponds to an object in our scene
+						// index corresponds to an object in our scene
 						if (intersections.at(index_of_winning_object) > accuracy) {
 							// determine the position and direction vectors at the point of intersection
 							
@@ -441,7 +441,7 @@ int main (int argc, char *argv[]) {
 	
 	savebmp("scene_anti-aliased.bmp",width,height,dpi,pixels);
 	
-	delete pixels, tempRed, tempGreen, tempBlue;
+	delete [] pixels, tempRed, tempGreen, tempBlue;
 	
 	t2 = clock();
 	float diff = ((float)t2 - (float)t1)/CLOCKS_PER_SEC;
