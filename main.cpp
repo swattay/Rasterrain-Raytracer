@@ -348,7 +348,7 @@ int main (int argc, char *argv[]) {
 							yamnt = ((height - y) + 0.5)/height;
 						}
 						else if (height > width) {
-							// the imager is taller than it is wide
+							// the image is taller than it is wide
 							xamnt = (x + 0.5)/ width;
 							yamnt = (((height - y) + 0.5)/height)/aspectratio - (((height - width)/(double)width)/2);
 						}
@@ -366,7 +366,7 @@ int main (int argc, char *argv[]) {
 							yamnt = ((height - y) + (double)aax/((double)aadepth - 1))/height;
 						}
 						else if (height > width) {
-							// the imager is taller than it is wide
+							// the image is taller than it is wide
 							xamnt = (x + (double)aax/((double)aadepth - 1))/ width;
 							yamnt = (((height - y) + (double)aax/((double)aadepth - 1))/height)/aspectratio - (((height - width)/(double)width)/2);
 						}
@@ -441,7 +441,10 @@ int main (int argc, char *argv[]) {
 	
 	savebmp("scene_anti-aliased.bmp",width,height,dpi,pixels);
 	
-	delete [] pixels, tempRed, tempGreen, tempBlue;
+	delete [] pixels;
+	delete [] tempRed;
+	delete [] tempGreen;
+	delete [] tempBlue;
 	
 	t2 = clock();
 	float diff = ((float)t2 - (float)t1)/CLOCKS_PER_SEC;
