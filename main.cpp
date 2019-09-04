@@ -274,7 +274,7 @@ int main (int argc, char *argv[]) {
 	int n = width*height;
 	RGBType *pixels = new RGBType[n];
 	
-	int aadepth = 1;
+	const int aadepth = 1;
 	double aathreshold = 0.1;
 	double aspectratio = (double)width/(double)height;
 	double ambientlight = 0.2;
@@ -320,7 +320,7 @@ int main (int argc, char *argv[]) {
 	
 	int thisone, aa_index;
 	double xamnt, yamnt;
-	double tempRed, tempGreen, tempBlue;
+	double *tempRed=0, *tempGreen=0, *tempBlue=0;
 	
 	for (int x = 0; x < width; x++) {
 		for (int y = 0; y < height; y++) {

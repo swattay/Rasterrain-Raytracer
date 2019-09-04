@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+/Debug
+/x64/Debug
+/.vs/Rasterrain-Raytracer/v15
+/scene_anti-aliased.bmp
